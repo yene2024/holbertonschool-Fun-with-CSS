@@ -1,21 +1,24 @@
-#Fun with CSS
-Project Overview
+# Fun with CSS
+## Project Overview
 This project is part of a series of exercises designed to explore and implement fun and creative layouts using HTML and CSS only. The goal is to gain a deeper understanding of CSS capabilities by creating interactive and visually appealing web elements without relying on JavaScript.
 
-Project Details
+## Project Details
 Project Name: Fun with CSS
 Author: Guillaume, CTO at Holberton School
 Level: Amateur
 Technologies Used: HTML5, CSS3
 Objective: To implement creative layouts using only HTML and CSS, pushing the boundaries of what can be achieved without JavaScript.
 Tasks Included
-1. Sprite Languages
-Objective: Create a layout using sprite images.
+Sprite Languages
+
+## Objective: Create a layout using sprite images.
 Details: Using provided HTML and an image sprite, you must generate a specific layout using CSS.
-2. Toggle
+Toggle
+
 Objective: Implement a toggle button using only HTML and CSS.
 Details: Create an interactive toggle button that changes its appearance based on its state (e.g., checked/unchecked).
-3. Vertical Dropdown Menu
+Vertical Dropdown Menu
+
 Objective: Build a vertical dropdown menu.
 Details: Create a vertical dropdown menu that expands and collapses when the main button is clicked. This menu should be styled and animated entirely using CSS.
 How to Use This Project
@@ -23,7 +26,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone <https://github.com/yene2024/holbertonschool-Fun-with-CSS.git>
+git clone https://github.com/yene2024/holbertonschool-Fun-with-CSS.git
 View the Project:
 
 Open the index.html file in your browser to see the various layouts and interactions in action.
@@ -39,3 +42,4 @@ If you'd like to contribute to this project, feel free to fork the repository an
 
 License
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
