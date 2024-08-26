@@ -1,0 +1,138 @@
+nav {
+    position: relative;
+    width: 60px; /* Adjust the size of the menu button area */
+    margin: 100px auto; /* Center the button on the page */
+}
+
+.menu-open-button {
+    background-color: #FF5A5F; /* Red color */
+    border-radius: 50%; /* Make it circular */
+    width: 60px;
+    height: 60px;
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth animation on click */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-open-button:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.menu-open {
+    display: none;
+}
+
+.menu-open:checked ~ .menu-open-button {
+    transform: rotate(45deg); /* Rotate the button when active */
+}
+
+.menu-open-button .menu-line {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-open-button .menu-line-1 {
+    top: 18px;
+    left: 15px;
+}
+
+.menu-open-button .menu-line-2 {
+    top: 27px;
+    left: 15px;
+}
+
+.menu-open-button .menu-line-3 {
+    top: 36px;
+    left: 15px;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line-1 {
+    transform: rotate(45deg);
+    top: 27px;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line-2 {
+    opacity: 0;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line-3 {
+    transform: rotate(-45deg);
+    top: 27px;
+}
+
+.menu-item {
+    position: absolute;
+    background-color: #FF5A5F; /* Same color as the button */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when the menu is closed */
+}
+
+.menu-open:checked ~ .menu-item {
+    opacity: 1;
+    pointer-events: auto; /* Allow interaction when the menu is open */
+}
+
+.menu-item-1 {
+    top: -70px; /* Adjust to position item 1 */
+    left: 5px;
+    transform: translate(0, 0);
+}
+
+.menu-item-2 {
+    top: -130px; /* Adjust to position item 2 */
+    left: 5px;
+    transform: translate(0, 0);
+}
+
+.menu-item-3 {
+    top: -190px; /* Adjust to position item 3 */
+    left: 5px;
+    transform: translate(0, 0);
+}
+
+.menu-item-4 {
+    top: -250px; /* Adjust to position item 4 */
+    left: 5px;
+    transform: translate(0, 0);
+}
+
+.menu-item-5 {
+    top: -310px; /* Adjust to position item 5 */
+    left: 5px;
+    transform: translate(0, 0);
+}
+
+.menu-open:checked ~ .menu-item-1 {
+    transform: translate(0, 70px); /* Appear in the desired position */
+}
+
+.menu-open:checked ~ .menu-item-2 {
+    transform: translate(0, 130px); /* Appear in the desired position */
+}
+
+.menu-open:checked ~ .menu-item-3 {
+    transform: translate(0, 190px); /* Appear in the desired position */
+}
+
+.menu-open:checked ~ .menu-item-4 {
+    transform: translate(0, 250px); /* Appear in the desired position */
+}
+
+.menu-open:checked ~ .menu-item-5 {
+    transform: translate(0, 310px); /* Appear in the desired position */
+}
