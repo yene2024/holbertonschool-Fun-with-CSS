@@ -1,0 +1,85 @@
+/* Base styles for the toggle container */
+.toggle {
+    position: relative;
+    width: 90px;
+    height: 30px;
+}
+
+.toggle-cb {
+    display: none;
+}
+
+
+.toggle-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid #ccc;
+}
+
+.toggle-switch {
+    position: absolute;
+    width: 26px; 
+    height: 26px;
+    background-color: #fff; /* Color of the switch knob */
+    border-radius: 50%; /* Makes the knob circular */
+    top: 0px; /* Adjust to center the knob vertically */
+    left: 0px; /* Position knob to the left initially */
+    transition: left 0.3s ease;
+    scale: 1.5;
+    border: 2px solid #ccc;
+}
+
+/* Checkbox checked state styles */
+.toggle-cb:checked + .toggle-label {
+    background-color: #c22828; /* Background color when checked */
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+    left: calc(100% - 28px); /* Move the knob to the right when checked */
+}
+
+/* Adding text with pseudo-elements */
+.toggle-label::before {
+    content: "No";
+    position: absolute;
+    right: 25%; /* Positioning for "No" */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a7a7a7; /* Color for "No" text */
+    font-size: 14px; /* Font size for text */
+    transition: opacity 0.3s ease;
+}
+
+.toggle-label::after {
+    content: "Yes";
+    position: absolute;
+    left: 25%; /* Positioning for "Yes" */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff; /* Color for "Yes" text */
+    font-size: 14px; /* Font size for text */
+    transition: opacity 0.3s ease;
+}
+
+/* Hide "No" text when checked and show "Yes" */
+.toggle-cb + .toggle-label::before {
+    opacity: 1; /* Hide "No" text */
+}
+
+.toggle-cb + .toggle-label::after {
+    opacity: 0; /* Hide "No" text */
+}
+
+.toggle-cb:checked + .toggle-label::before {
+    opacity: 0; /* Show "Yes" text */
+}
+
+.toggle-cb:checked + .toggle-label::after {
+    opacity: 1; /* Show "Yes" text */
+}
